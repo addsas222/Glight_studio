@@ -75,8 +75,10 @@
 `hf-mirror.com` **可达**；pypi / 清华源 / npmmirror 均可用。
 → 所以模型下载默认走 `hf-mirror.com`，新增任何境外依赖前先确认可达性。
 
-**注意**：本目录**不是 git 仓库**（无 `.git`）。动手前请自行备份，或先 `git init` 建基线，
-否则改坏了没有回退手段。
+**版本库（2026-09-22 已建基线）**：已 `git init`（分支 `main`），首次提交 `ef22c57` 收录 127 个源文件
+（约 1.8 MB；`.venv` / `node_modules` / `dist` / 模型权重 `*.onnx` / `_e2e_out` 等已由 `.gitignore`
+排除、未入库）。本机默认 `core.autocrlf=false`（克制 CRLF 改写）。改动前 `git add -A && git commit`，
+改坏了用 `git checkout -- <file>` 或 `git reset --hard <good-sha>` 回退。原先「无 `.git`、改坏无回退」的风险已消除。
 
 ---
 
