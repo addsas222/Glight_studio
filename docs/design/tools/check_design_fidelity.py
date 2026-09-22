@@ -58,8 +58,12 @@ def is_runtime(s):
     """设计稿静态样例 vs 代码运行时值 —— 这类按设计允许不同。"""
     if re.search(r"\d", s):
         return True                       # 含数字：数值 / 单位 / 比例 / 计数 / 色温
-    if "·" in s and re.search(r"[A-Za-z]", s):
-        return True                       # 「主光 · 点光」角色·类型组合标签
+    if re.search(r"\.(png|jpe?g|webp|svg|gif|mp4|mov)\b", s, re.I):
+        return True                       # 示例文件名（角色立绘.png / 舞台_黄昏.jpg…）
+    if "·" in s:
+        return True                       # 「主光 · 点光」等角色·类型 / 标签·值 组合（至少一侧是运行时值）
+    if "：" in s:
+        return True                       # 「当前主题：…」「选中：…」「深度来源：…」= 标签:运行时值
     core = re.sub(r"[·:×x/.+\-–—()（）°K#]", "", squash(s))
     return core != "" and all(ord(c) < 128 for c in core)  # 纯 ASCII 数值标记
 
@@ -70,6 +74,13 @@ def build_corpus():
     out = []
     for rel in files:
         p = os.path.join(SRC, rel)
+        if os.path.exists(p):
+            out.append(squash(io.open(p, encoding="utf-8").read()))
+    # 后端定义、经 /api/themes·/api/state 供前端取用的「运行时值」也计入可用代码，
+    # 否则主题名（暗夜蓝调 / 霓虹青紫 / 暗房琥珀）与后端标签（内置本地引擎）
+    # 会被子串匹配误判成文案缺口——它们本就是后端里的事实源。
+    for rel in ("core/theme.py", "core/ai_backend.py", "webui/api.py"):
+        p = os.path.join(ROOT, rel)
         if os.path.exists(p):
             out.append(squash(io.open(p, encoding="utf-8").read()))
     return "".join(out)

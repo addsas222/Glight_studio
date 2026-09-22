@@ -1172,7 +1172,7 @@ export function createFramePaintScreen(): Screen {
     });
     const timeline = h("div", {
       style: "flex:0 0 216px;display:flex;flex-direction:column;gap:6px;padding:8px 14px;background:var(--hls-bg-panel);border-top:1px solid var(--hls-border);min-height:0;overflow:hidden",
-    }, transport, strip, ruler, tracks);
+    }, h("div", { class: "small sec", style: "margin:0 2px" }, "光绘时间轴"), transport, strip, ruler, tracks);
 
     root.append(h("div", { style: "flex:1;display:flex;min-height:0" }, left, main, right), timeline);
     return { brushGrid, brushProps, swatches, curveBox, stage, frameBox, img, overlay, hud, progress, exportBtn, layers: layerBox, props, strip, ruler, tracks, transport };
