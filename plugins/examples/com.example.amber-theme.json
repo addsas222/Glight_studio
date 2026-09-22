@@ -1,0 +1,28 @@
+{
+  "id": "com.example.amber-theme",
+  "name": "琥珀暗色主题",
+  "version": "1.0.0",
+  "kind": "theme",
+  "description": "示例主题插件（可直接安装）。data.tokens 是界面设计 token 到 #RRGGBB 颜色的映射，键名与内置主题一致：bg-root / bg-panel / bg-elevated / bg-canvas / border / border-strong / text-primary / text-secondary / text-muted / accent / accent-bright / accent-tint / accent-line / success / warm / violet。非法颜色值会被丢弃，未列出的 token 不会出现在贡献数据中（由宿主决定如何与内置主题合并）。也可以省略 tokens 这一层，直接把颜色表写在 data 下。",
+  "author": "凌日光影棚",
+  "data": {
+    "tokens": {
+      "bg-root": "#0D0A06",
+      "bg-panel": "#141009",
+      "bg-elevated": "#1E1810",
+      "bg-canvas": "#080604",
+      "border": "#2A2115",
+      "border-strong": "#3C2F1E",
+      "text-primary": "#F7F1E6",
+      "text-secondary": "#BCA98C",
+      "text-muted": "#7A6A52",
+      "accent": "#F59E0B",
+      "accent-bright": "#FBBF24",
+      "accent-tint": "#2A1E08",
+      "accent-line": "#6B4A10",
+      "success": "#34D399",
+      "warm": "#FFA94D",
+      "violet": "#A78BFA"
+    }
+  }
+}

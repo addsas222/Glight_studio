@@ -1,0 +1,39 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+# 打包用的独立虚拟环境（由 packaging/build_* 脚本创建）
+.venv-build/
+# 本地深度服务专用虚拟环境（由 server/setup_deployment.* 创建）
+.venv-server/
+.pytest_cache/
+
+# ---- Node (仅构建期使用，不随软件分发) ----
+node_modules/
+webui/frontend/node_modules/
+
+# 构建产物
+build/
+dist/
+webui/frontend/dist/
+*.spec.bak
+
+# ---- 用户数据 / 模型权重（不纳入版本库） ----
+*.onnx
+*.pth
+*.pt
+.horizon_light_studio/
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ---- 本地参考仓库（仅用于开发期查阅） ----
+_agentrepos/
+
+# ---- 端到端自检的临时产物（tests/live_e2e.py 生成） ----
+_e2e_out/

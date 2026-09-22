@@ -1,0 +1,32 @@
+{
+  "id": "com.example.warm-rig",
+  "name": "暖色双灯灯组",
+  "version": "1.0.0",
+  "kind": "light-rig",
+  "description": "示例灯组插件（可直接安装）。data.lights 中每一项是一个光源对象，只允许使用 Light 的已知字段：name / kind(directional|point) / dx,dy,dz（方向光，指向光源的向量，dz>0 朝向观察者）/ px,py,pz（点光源归一化坐标与高度）/ intensity(0~4) / kelvin(1500~12000) / radius(0.05~1.5) / visible。未知字段会被丢弃，越界数值会被收敛到上述范围。安装后本灯组会出现在界面的「插件灯组」中，可一键套用。",
+  "author": "凌日光影棚",
+  "data": {
+    "lights": [
+      {
+        "name": "暖主光",
+        "kind": "directional",
+        "dx": -0.5,
+        "dy": -0.6,
+        "dz": 0.7,
+        "intensity": 1.2,
+        "kelvin": 3200,
+        "radius": 0.5
+      },
+      {
+        "name": "暖侧逆光",
+        "kind": "directional",
+        "dx": 0.8,
+        "dy": -0.25,
+        "dz": 0.4,
+        "intensity": 0.6,
+        "kelvin": 2900,
+        "radius": 0.6
+      }
+    ]
+  }
+}

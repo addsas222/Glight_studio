@@ -1,0 +1,49 @@
+[project]
+name = "horizon-light-studio"
+version = "1.0.0"
+description = "凌日光影棚 Horizon Light Studio —— 2D 动漫风格图片与视频的 AI 智能光照增强桌面软件"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = ["relighting", "depth-estimation", "anime", "video", "lighting"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: X11 Applications",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Topic :: Multimedia :: Graphics :: Graphics Conversion",
+  "Topic :: Multimedia :: Video",
+]
+
+# 运行期依赖：与 requirements.txt 保持一致（两处需同步修改）
+dependencies = [
+  # --- 引擎 ---
+  "pillow>=10.0",
+  "numpy>=1.24",
+  # --- 界面与本地服务（WebUI 由 Python 托管，运行期不需要 Node）---
+  "fastapi>=0.110",
+  "uvicorn>=0.29",
+  # --- 视频处理：随包静态 ffmpeg，免装系统 ffmpeg ---
+  "imageio-ffmpeg>=0.4.9",
+  # --- 内置深度引擎（离线，强烈推荐；缺失时自动降级为仅预览模式）---
+  "onnxruntime>=1.16",
+]
+
+# 开发 / 测试 / 打包依赖：`uv sync` 默认安装本组；运行时可用 `--no-dev` 跳过
+[dependency-groups]
+dev = [
+  "pytest>=8.0",
+  "pyinstaller>=6.0",
+  # 界面端到端测试（拟人点击）：装完还需 `uv run playwright install chromium`
+  "playwright>=1.40",
+]
+
+[tool.uv]
+# 本项目是**应用**而不是库：由仓库根目录直接运行（python -m webui.desktop），
+# 不打包安装自身，因此无需 build backend，也不会有 site-packages 里的副本。
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# tests/ui_playwright.py 是独立运行的界面测试（文件名不以 test_ 开头，pytest 不会收集）

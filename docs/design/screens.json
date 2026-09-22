@@ -1,0 +1,93 @@
+{
+ "pen": "C:/Users/54301/Downloads/Glight_studio/docs/design/凌日光影棚-设计稿.pen",
+ "screens": [
+  {
+   "name": "光影工作台 · Light Workbench",
+   "id": "EwNq5",
+   "nodes": 219,
+   "png": "B8-光影工作台.png",
+   "x": 2440,
+   "y": 0
+  },
+  {
+   "name": "智能打光 · Auto Light",
+   "id": "9q5HR",
+   "nodes": 145,
+   "png": "B9-智能打光.png",
+   "x": 3940,
+   "y": 0
+  },
+  {
+   "name": "专业模式 · Pro Mode",
+   "id": "jLcTk",
+   "nodes": 212,
+   "png": "B10-专业模式.png",
+   "x": 5440,
+   "y": 0
+  },
+  {
+   "name": "视频调光 · Video Light",
+   "id": "w8ktg",
+   "nodes": 230,
+   "png": "B11-视频调光.png",
+   "x": 2440,
+   "y": 940
+  },
+  {
+   "name": "逐帧光绘 · Frame Paint",
+   "id": "JYPpF",
+   "nodes": 288,
+   "png": "B12-逐帧光绘.png",
+   "x": 3940,
+   "y": 940
+  },
+  {
+   "name": "光源星图 · Light Starmap",
+   "id": "JJg7d",
+   "nodes": 269,
+   "png": "B13-光源星图.png",
+   "x": 5440,
+   "y": 940
+  },
+  {
+   "name": "智能拾光 · Light Harvest",
+   "id": "DLHej",
+   "nodes": 188,
+   "png": "B14-智能拾光.png",
+   "x": 2440,
+   "y": 1880
+  },
+  {
+   "name": "三维布光预演 · 3D Previs",
+   "id": "2iDJf",
+   "nodes": 232,
+   "png": "B15-三维布光预演.png",
+   "x": 3940,
+   "y": 1880
+  },
+  {
+   "name": "调光台 · Light Desk",
+   "id": "VFRf9",
+   "nodes": 254,
+   "png": "B16-调光台.png",
+   "x": 5440,
+   "y": 1880
+  },
+  {
+   "name": "插件中心 · Plugins",
+   "id": "I3Vrz",
+   "nodes": 179,
+   "png": "B17-插件中心.png",
+   "x": 2440,
+   "y": 2820
+  },
+  {
+   "name": "主题引擎 · Theme Engine",
+   "id": "w9QPz",
+   "nodes": 356,
+   "png": "B18-主题引擎.png",
+   "x": 3940,
+   "y": 2820
+  }
+ ]
+}

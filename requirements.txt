@@ -1,0 +1,28 @@
+# 凌日光影棚 —— 运行时依赖（独立桌面软件）
+# 安装：pip install -r requirements.txt
+#
+# ⚠ 本文件与 pyproject.toml 的 [project.dependencies] 是**同一份依赖的两种写法**。
+#   使用 uv 的项目请改 pyproject.toml（uv sync / uv.lock）；改任一处都要同步另一处。
+#
+# 说明：
+#   - 界面为 WebUI（Node 仅在构建前端时需要，运行期不需要 Node/npm）。
+#     本文件包含托管界面所需的 Web 服务依赖。
+#   - onnxruntime 用于「内置本地深度引擎」；不装也能运行，会自动降级。
+#   - imageio-ffmpeg 提供随包静态 ffmpeg（视频处理必需，约 80MB），
+#     装了它就不需要系统另外安装 ffmpeg。
+#   - 完全离线可用（除云端 AI 后端）。
+#   - 本地自建深度服务的依赖见 server/requirements.txt（另装，不随软件分发）。
+
+# --- 引擎 ---
+pillow>=10.0
+numpy>=1.24
+
+# --- 界面与本地服务（WebUI）---
+fastapi>=0.110
+uvicorn>=0.29
+
+# --- 视频处理（随包静态 ffmpeg）---
+imageio-ffmpeg>=0.4.9
+
+# --- 内置深度引擎（可选，强烈推荐）---
+onnxruntime>=1.16

@@ -1,0 +1,40 @@
+{
+  "id": "com.example.velvet-night",
+  "name": "丝绒夜景",
+  "version": "1.0.0",
+  "kind": "preset",
+  "description": "示例预设插件（可直接安装）。data 是一份 RenderParams：ambient_intensity(0~2) / ambient_kelvin(1500~12000) / shadow_mode(hard|soft) / lighting_mode(linear|hq) / preview_size(64~4096) / lighting_size(64~4096) / shadow_strength(0~1) / specular_strength(0~1) / tone_preserve(0~1) / exposure(0.2~2.5) / reference_offset(对象或 null)，外加可选的 lights 数组（字段同 light-rig）。未知字段会被忽略；出现非法取值时整条预设会被跳过并在日志中记录。安装后本预设会出现在预设下拉框中，名称即 name 字段。",
+  "author": "凌日光影棚",
+  "data": {
+    "ambient_intensity": 0.32,
+    "ambient_kelvin": 4200,
+    "shadow_mode": "soft",
+    "lighting_mode": "linear",
+    "shadow_strength": 0.8,
+    "specular_strength": 0.5,
+    "tone_preserve": 0.65,
+    "exposure": 0.95,
+    "lights": [
+      {
+        "name": "窗边冷光",
+        "kind": "directional",
+        "dx": 0.65,
+        "dy": -0.45,
+        "dz": 0.6,
+        "intensity": 0.9,
+        "kelvin": 7200,
+        "radius": 0.55
+      },
+      {
+        "name": "丝绒暖补光",
+        "kind": "point",
+        "px": 0.25,
+        "py": 0.7,
+        "pz": 0.8,
+        "intensity": 0.7,
+        "kelvin": 2700,
+        "radius": 0.9
+      }
+    ]
+  }
+}

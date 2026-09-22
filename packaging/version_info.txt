@@ -1,0 +1,32 @@
+# UTF-8
+# PyInstaller Windows 版本资源（exe 属性页显示的中文信息）
+VSVersionInfo(
+    ffi=FixedFileInfo(
+        filevers=(1, 0, 0, 0),
+        prodvers=(1, 0, 0, 0),
+        mask=0x3F,
+        flags=0x0,
+        OS=0x40004,
+        fileType=0x1,
+        subtype=0x0,
+        date=(0, 0),
+    ),
+    kids=[
+        StringFileInfo([
+            StringTable(
+                '080404B0',
+                [
+                    StringStruct('CompanyName', '凌日光影棚'),
+                    StringStruct('FileDescription', '凌日光影棚 —— 2D 动漫图片智能光照增强'),
+                    StringStruct('FileVersion', '1.0.0.0'),
+                    StringStruct('InternalName', 'HorizonLightStudio'),
+                    StringStruct('LegalCopyright', 'MIT License'),
+                    StringStruct('OriginalFilename', 'HorizonLightStudio.exe'),
+                    StringStruct('ProductName', '凌日光影棚 Horizon Light Studio'),
+                    StringStruct('ProductVersion', '1.0.0.0'),
+                ],
+            )
+        ]),
+        VarFileInfo([VarStruct('Translation', [2052, 1200])]),
+    ],
+)

@@ -1,0 +1,14 @@
+# 开发 / 测试 / 打包依赖（可选）
+# 安装：pip install -r requirements-dev.txt
+# 说明：日常使用软件不需要本文件，仅开发、测试、出包、构建前端时需要。
+#
+# ⚠ 与 pyproject.toml 的 [dependency-groups].dev 对应（uv 方式用 `uv sync`）。
+#   改任一处都要同步另一处。
+
+-r requirements.txt
+
+pytest>=8.0
+pyinstaller>=6.0
+
+# 界面端到端测试（拟人点击）：pip install playwright && playwright install chromium
+playwright>=1.40

@@ -1,0 +1,14 @@
+[Desktop Entry]
+Type=Application
+Name=凌日光影棚
+Name[en]=Horizon Light Studio
+GenericName=智能光照增强
+Comment=为加查俱乐部及同类 2D 动漫图片提供 AI 深度分析与多光源物理光照增强
+Comment[en]=AI depth analysis and multi-light physical relighting for 2D anime images
+Exec=HorizonLightStudio
+Icon=@APP_ID@
+Terminal=false
+Categories=Graphics;2DGraphics;RasterGraphics;
+Keywords=light;lighting;anime;render;depth;gacha;
+StartupNotify=true
+StartupWMClass=HorizonLightStudio

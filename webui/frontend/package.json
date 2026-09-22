@@ -1,0 +1,15 @@
+{
+  "name": "horizon-light-studio-ui",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "凌日光影棚 Horizon Light Studio —— WebUI 前端（仅构建期需要 Node，运行期由 Python 服务托管静态产物）",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0",
+    "typescript": "^5.5.0"
+  }
+}
